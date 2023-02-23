@@ -33,7 +33,7 @@ public class Cabina {
     public void pagarPeaje(int peaje, Vehiculo vehiculo){
         this.saldo+= peaje;
         this.registro.put(vehiculo,peaje);
-        System.out.println("Se realizo el pago de Bs " + peaje + "del vehiculo " + vehiculo.getPlaca());
+        System.out.println("Se realizo el pago de Bs " + peaje + " del vehiculo " + vehiculo.getPlaca());
 
 
     }
@@ -47,5 +47,9 @@ public class Cabina {
                 System.out.println("--> " + key.showinfo() + " pagó Bs " + registro.get(key));
             }
         }
+    }
+
+    public void mostrarSaldo() {
+        System.out.println("El saldo es de Bs " + this.saldo);
     }
 }

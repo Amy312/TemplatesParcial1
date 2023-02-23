@@ -24,6 +24,18 @@ public class Vehiculo {
     }
 
     public String showinfo() {
-        return  "Placa: " + getPlaca() + ", modelo: " + getModelo() + "y color: " + getColor();
+        return  "Placa: " + getPlaca() + ", modelo: " + getModelo() + " y color: " + getColor();
+    }
+
+    public void pagarPeaje(){
+        int tipo = 0;
+        if(this.modelo.equals("A")){
+            tipo = 10;
+        } else if(this.modelo.equals("B")){
+            tipo = 20;
+        } else {
+            tipo = 15;
+        }
+        Cabina.getInstance().pagarPeaje(tipo, this);
     }
 }
