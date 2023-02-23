@@ -1,0 +1,12 @@
+package PrimerParcial.Interpreter5;
+
+public class Multiplicacion extends OperacionesMatematicas{
+    @Override
+    public void interpreter(Context context) {
+        if(context.input.startsWith("*")){
+            context.signo = false;
+            context.input = context.input.substring(1);
+        }
+    }
+}
+
